@@ -1,4 +1,8 @@
-def is_prime(n):
+'''
+Returneaza true daca n este prim si false daca nu...
+'''
+
+def is_prime (n):
     if n < 2:
         return False
     else:
@@ -9,12 +13,19 @@ def is_prime(n):
             i = i + 1
         return True
 
+'''
+Returneaza produsul numerelor din lista lst.
+'''
 
 def get_product (lst):
     product=1
     for i in (lst):
         product=product*i
     return product
+
+'''
+Returneaza CMMDC a doua numere x si y folosind primul algoritm.
+'''
 
 def get_cmmdc_1(x, y):
     while x != y:
@@ -23,6 +34,10 @@ def get_cmmdc_1(x, y):
         else:
             y = y - x
     return x
+
+'''
+Returneaza CMMDC a doua numere x si y folosind al doilea algoritm.
+'''
 
 def get_cmmdc_2(x, y):
     while y != 0:
@@ -41,12 +56,12 @@ def main():
         print("x. Exit")
         optiune = input()
         if optiune == '1':
-            nr=int(input("Scrieti un nr: "))
+            nr = int(input("Scrieti un nr: "))
             print(is_prime(nr))
         elif optiune =='2':
-            str=input("Adaugati nr separate prin virgula: ")
-            lst=str.split(',')
-            for i , x in enumerate(lst):
+            str = input("Adaugati nr separate prin virgula: ")
+            lst = str.split(',')
+            for i, x in enumerate(lst):
                 lst[i]=int(x)
             print(get_product(lst))
         elif optiune == '3':
